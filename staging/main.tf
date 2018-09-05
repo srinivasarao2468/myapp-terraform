@@ -18,15 +18,15 @@ module "vpc_endpoint" {
 }
 
 # MicrosoftAD
-module "microsoft_ad" {
-  source      = "../modules/microsoft-ad"
-  ad_name     = "${var.corp.mycompany.com}"
-  ad_password = "${var.ad_password}"
-  ad_edition  = "${var.ad_edition}"
-  ad_type     = "${var.ad_type}"
-  vpc_id      = "${module.my_vpc.vpc_id}"
-  subnet_ids  = "${module.my_vpc.subnet_ids}"
-}
+# module "microsoft_ad" {
+#   source      = "../modules/microsoft-ad"
+#   ad_name     = "${var.ad_name}"
+#   ad_password = "${var.ad_password}"
+#   ad_edition  = "${var.ad_edition}"
+#   ad_type     = "${var.ad_type}"
+#   vpc_id      = "${module.my_vpc.vpc_id}"
+#   subnet_ids  = "${module.my_vpc.subnet_ids}"
+# }
 
 # Create Placement Group for HPC
 module "placement_group" {
