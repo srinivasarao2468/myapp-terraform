@@ -34,7 +34,3 @@ module "placement_group" {
   pg_name     = "${var.pg_name}"
   pg_strategy = "${var.pg_strategy}"
 }
-
-output "sub_ids" {
-  value = "${module.my_vpc.subnet_ids}"
-}
