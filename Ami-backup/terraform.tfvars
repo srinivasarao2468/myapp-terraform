@@ -1,10 +1,10 @@
 linux_instance_ids = [
-    "i-0367f39d462bfd340"
+    "i-099039a1047e0bbc7"
 ]
 sub_ids = [
-    "subnet-06ef12a6eb476e8a0",
-    "subnet-089b2733c13c17905"
+    "subnet-0b00358da805d0709",
+    "subnet-0ddcb2b33a1f80233"
 ]
 windows_instance_ids = [
-    "i-02bf9cd35edc072fa"
+    "i-09573bec6c812caf8"
 ]
