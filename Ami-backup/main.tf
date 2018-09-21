@@ -1,6 +1,14 @@
+locals {
+  linux_ami_name = "${var.linux_ami_name}-${replace(timestap(),":","")}"
+}
+
+locals {
+  linux_ami_name = "${var.linux_ami_name}-${replace(timestamp(),":","")}"
+}
+
 module "linux_ami_backup" {
   source                  = "../modules/ami"
-  created_ami_name        = "${var.linux_ami_name}"
+  created_ami_name        = "${var.local.linux_ami_name}"
   instance_id             = "${var.linux_instance_ids}"
   snapshot_without_reboot = "${var.snapshot_without_reboot}"
 }
@@ -11,7 +19,7 @@ module "linux_ami_backup" {
 
 module "windows_ami_backup" {
   source                  = "../modules/ami"
-  created_ami_name        = "${var.windows_ami_name}"
+  created_ami_name        = "${var.local.windows_ami_name}"
   instance_id             = "${var.windows_instance_ids}"
   snapshot_without_reboot = "${var.snapshot_without_reboot}"
 }
