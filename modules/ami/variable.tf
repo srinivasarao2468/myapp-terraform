@@ -1,5 +1,5 @@
 variable "created_ami_name" {
-  default = "sample_ami"
+  #type = "list"
 }
 
 variable "snapshot_without_reboot" {

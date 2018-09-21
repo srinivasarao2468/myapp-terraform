@@ -1,9 +1,11 @@
 variable "windows_ami_name" {
-  default = "sample_ami"
+  #type = "list"
+  default = "windows_ami"
 }
 
 variable "linux_ami_name" {
-  default = "sample_ami"
+  #type = "list"
+  default = "linux_ami"
 }
 
 variable "snapshot_without_reboot" {
