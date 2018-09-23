@@ -1,25 +1,24 @@
 variable "windows_ami_name" {
-  #type = "list"
-  default = "windows_ami"
+  description = "Name of the windows ami"
+  default     = "windows_ami"
 }
 
 variable "linux_ami_name" {
-  #type = "list"
-  default = "linux_ami"
+  description = "Name of linux ami"
+  default     = "linux_ami"
 }
 
 variable "snapshot_without_reboot" {
-  default = true
+  description = "creating snapshot without reaboot?"
+  default     = true
 }
 
-# variable "instance_id" {
-#   type = "list"
-# }
-
 variable "linux_instance_ids" {
-  type = "list"
+  description = "This is linux instance ids"
+  type        = "list"
 }
 
 variable "windows_instance_ids" {
-  type = "list"
+  description = "This is windows instance ids"
+  type        = "list"
 }

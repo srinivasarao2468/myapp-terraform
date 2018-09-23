@@ -13,7 +13,7 @@ module "my_vpc" {
 module "vpc_endpoint" {
   source               = "../modules/vpc-endpoints"
   vpc_id               = "${module.my_vpc.vpc_id}"
-  vpc_endpoind_service = "${var.vpc_endpoind_service}"
+  vpc_endpoind_service = "${var.vpc_endpoint_service}"
   route_table_ids      = ["${module.my_vpc.route_tbl_id}"]
 }
 

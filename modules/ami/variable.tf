@@ -1,4 +1,4 @@
-variable "created_ami_name" {
+variable "creating_ami_name" {
   #type = "list"
 }
 
@@ -6,7 +6,7 @@ variable "snapshot_without_reboot" {
   default = true
 }
 
-variable "instance_id" {
+variable "instance_ids" {
   type = "list"
 }
 

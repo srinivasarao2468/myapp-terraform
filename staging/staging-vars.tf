@@ -1,5 +1,6 @@
 variable "region" {
-  default = "us-east-1"
+  description = "default region is us-east-1"
+  default     = "us-east-1"
 }
 
 variable "subnet_count" {
@@ -7,7 +8,7 @@ variable "subnet_count" {
   default = 2
 }
 
-variable "vpc_endpoind_service" {
+variable "vpc_endpoint_service" {
   default = "com.amazonaws.us-east-1.s3"
 }
 
@@ -28,7 +29,6 @@ variable "ad_type" {
 }
 
 # Variables for EC2 instance module
-
 variable "key_name" {
   default = ""
 }
@@ -75,7 +75,6 @@ variable "pg_id" {
 }
 
 # Variables for placement group module
-
 variable "pg_name" {
   default = "app_pg"
 }

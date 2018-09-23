@@ -1,11 +1,7 @@
 resource "aws_ami_from_instance" "ami_creation" {
-  count = "${length(var.instance_id)}"
-  name  = "${var.created_ami_name}"
-
-  #name                    = "${var.created_ami_name[count.index]}"
-  #name                    = "${element(var.instance_id,count.index)}"
-  source_instance_id = "${var.instance_id[count.index]}"
-
+  count                   = "${length(var.instance_ids)}"
+  name                    = "${var.creating_ami_name}"
+  source_instance_id      = "${var.instance_ids[count.index]}"
   snapshot_without_reboot = "${var.snapshot_without_reboot }"
 }
 
@@ -13,6 +9,6 @@ provider "aws" {
   region = "${var.region}"
 }
 
-output "ami_id" {
+output "ami_ids" {
   value = "${aws_ami_from_instance.ami_creation.*.id}"
 }

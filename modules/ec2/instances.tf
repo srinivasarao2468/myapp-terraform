@@ -7,6 +7,6 @@ resource "aws_instance" "instances" {
   associate_public_ip_address = "${var.need_public_ip}"
   subnet_id                   = "${var.subnet_id[count.index]}"
   placement_group             = ""
-  vpc_security_group_ids      = ["${var.security_group_id}"]
+  vpc_security_group_ids      = ["${var.security_group_ids}"]
   key_name                    = "${var.ec2_key}"
 }
